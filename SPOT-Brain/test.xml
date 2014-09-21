@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<items>
+	<elephant>
+		<property>big</property>
+		<property>gray</property>
+		<property>big ears</property>
+		<property>animal</property>
+		<property>trunk</property>
+		<location>zoo</location>
+		<location>africa</location>
+		<location>thailand</location>
+	</elephant>
+	<car>
+		<property>wheels</property>
+		<property>engine</property>
+		<property>fast</property>
+		<property>four wheels</property>
+		<property>drive</property>
+		<property>steering wheel</property>
+		<property>horn</property>
+		<property>red</property>
+		<location>highway</location>
+		<location>road</location>
+		<location>street</location>
+		<location>driveway</location>
+		<location>garage</location>
+	</car>
+	<bicycle>
+		<property>wheels</property>
+		<property>two wheels</property>
+		<property>red</property>
+		<property>ride</property>
+		<property>gears</property>
+		<property>pedal</property>
+		<location>street</location>
+		<location>helmet</location>
+		<location>feet</location>
+		<location>road</location>
+		<location>garage</location>
+	</bicycle>
+	<cat>
+		<property>furry</property>
+		<property>claws</property>
+		<property>nails</property>
+		<property>fur</property>
+		<property>four legs</property>
+		<property>legs</property>
+		<property>two eyes</property>
+		<property>tail</property>
+		<property>pet</property>
+		<property>ears</property>
+		<property>whiskers</property>
+		<property>eyes</property>
+		<property>meow</property>
+		<property>hiss</property>
+		<property>run</property>
+		<property>natural</property>
+		<property>animal</property>
+		<property>alive</property>
+		<property>pet</property>
+		<property>cute</property>
+		<property>living</property>
+		<location>house</location>
+		<location>outside</location>
+		<location>outdoors</location>
+		<location>pet store</location>
+		<location>animal shelter</location>
+	</cat>
+	<ball>
+		<property>bouncy</property>
+		<property>roll</property>
+		<property>plastic</property>
+		<property>play</property>
+		<property>round</property>
+		<property>man made</property>
+		<property>play sports</property>
+		<property>multicolored</property>
+		<property>spherical</property>
+		<location>field</location>
+	</ball>
+	<book>
+		<property>pages</property>
+		<property>read</property>
+		<property>paper</property>
+		<property>words</property>
+		<property>heavy</property>
+		<property>rectangular</property>
+		<property>man made</property>
+		<property>tell story</property>
+		<property>letters</property>
+		<property>pictures</property>
+		<property>use one</property>
+		<location>library</location>
+		<location>class</location>
+		<location>bookshelf</location>
+		<location>bookstore</location>
+		<location>school</location>
+	</book>
+	<rose>
+		<property>red</property>
+		<property>flower</property>
+		<property>plant</property>
+		<property>stem</property>
+		<property>leaves</property>
+		<property>thorns</property>
+		<property>alive</property>
+		<property>grow</property>
+		<property>smell nice</property>
+		<property>smell good</property>
+		<property>smell sweet</property>
+		<location>garden</location>
+		<location>flower pot</location>
+		<location>vase</location>
+	</rose>
+	<bear>
+		<property>big</property>
+		<property>bear</property>
+		<property>ears</property>
+		<property>mascot</property>
+		<property>fur</property>
+		<property>eat salmon</property>
+		<property>roars</property>
+		<property>claws</property>
+		<property>furry</property>
+		<property>hibernate</property>
+		<property>wild animal</property>
+		<property>eat me</property>
+		<property>four legs</property>
+		<property>fish</property>
+		<property>eats fish</property>
+		<location>forest</location>
+		<location>cal</location>
+		<location>zoo</location>
+		<location>woods</location>
+		<location>cave</location>
+	</bear>
+	<dog>
+		<property>barks</property>
+		<property>friendly</property>
+		<property>tail</property>
+		<property>wag its tail</property>
+		<property>man's best friend</property>
+		<property>train</property>
+		<property>brown</property>
+		<property>domesticated</property>
+		<property>pet</property>
+		<property>bone</property>
+		<property>fur</property>
+		<property>ears</property>
+		<property>eats bones</property>
+		<property>four legs</property>
+		<location>dog house</location>
+		<location>house</location>
+	</dog>
+	<truck>
+		<property>wheels</property>
+		<property>red</property>
+		<property>long</property>
+		<property>more than four wheels</property>
+		<property>bed</property>
+		<property>transport</property>
+		<property>move</property>
+		<property>move lot</property>
+		<property>transport lot</property>
+		<property>haul</property>
+		<property>drive</property>
+		<property>horn</property>
+		<property>steering wheel</property>
+		<location>highway</location>
+		<location>road</location>
+		<location>street</location>
+		<location>driveway</location>
+		<location>garage</location>
+		<location>moving</location>
+	</truck>
+	<flower>
+		<property>petals</property>
+		<property>grow</property>
+		<property>stem</property>
+		<property>natural</property>
+		<property>pink</property>
+		<property>garden</property>
+		<property>smell good</property>
+		<property>alive</property>
+		<location>garden</location>
+		<location>flower pot</location>
+		<location>meadow</location>
+	</flower>
+	<kite>
+		<property>fly</property>
+		<property>made by man</property>
+		<property>man made</property>
+		<property>need wind</property>
+		<property>play</property>
+		<property>string</property>
+		<property>rope</property>
+		<property>tail</property>
+		<property>flow</property>
+		<location>sky</location>
+		<location>beach</location>
+	</kite>
+	<chicken>
+		<property>beak</property>
+		<property>cluck</property>
+		<property>lay eggs</property>
+		<property>claws</property>
+		<property>bird</property>
+		<property>wings</property>
+		<property>feathers</property>
+		<property>two legs</property>
+		<location>farm</location>
+		<location>hen house</location>
+		<location>coop</location>
+	</chicken>
+	<pig>
+		<property>pink</property>
+		<property>tail</property>
+		<property>fat</property>
+		<property>curly tail</property>
+		<property>hooves</property>
+		<property>four legs</property>
+		<property>oink</property>
+		<property>smell bad</property>
+		<property>snout</property>
+		<property>roll around</property>
+		<property>flat nose</property>
+		<location>mud</location>
+		<location>pig pen</location>
+		<location>farm</location>
+	</pig>
+	<clock>
+		<property>tells time</property>
+		<property>tick-tock</property>
+		<property>round</property>
+		<property>big</property>
+		<property>circular</property>
+		<property>two hands</property>
+		<location>wall</location>
+	</clock>
+	<watch>
+		<property>wear</property>
+		<property>read</property>
+		<property>small</property>
+		<property>tick-tock</property>
+		<property>carry</property>
+		<property>tells time</property>
+		<property>two hands</property>
+		<location>wrist</location>
+	</watch>
+	<table>
+		<property>eat</property>
+		<property>eat breakfast</property>
+		<property>eat lunch</property>
+		<property>eat dinner</property>
+		<property>sit around</property>
+		<property>hard</property>
+		<location>kitchen</location>
+		<location>house</location>
+	</table>
+	<bed>
+		<property>soft</property>
+		<property>sleep</property>
+		<property>lay</property>
+		<property>brown</property>
+		<location>bedroom</location>
+		<location>house</location>
+	</bed>
+	<hat>
+		<property>wear</property>
+		<property>brim</property>
+		<property>brown</property>
+		<location>head</location>
+	</hat>
+	<boot>
+		<property>wear</property>
+		<property>brown</property>
+		<property>laces</property>
+		<property>run</property>
+		<property>walk</property>
+		<property>hike</property>
+		<location>feet</location>
+		<location>foot</location>
+		<location>shoe store</location>
+	</boot>
+	<banana>
+		<property>fruit</property>
+		<property>eat</property>
+		<property>skin</property>
+		<property>peel</property>
+		<property>yellow</property>
+		<location>tree</location>
+		<location>grocery store</location>
+		<location>market</location>
+		<location>kitchen</location>
+	</banana>
+	<spoon>
+		<property>eat</property>
+		<property>small</property>
+		<property>utensil</property>
+		<location>kitchen</location>
+		<location>dining room</location>
+	</spoon>
+	<beachball>
+		<property>round</property>
+		<property>roll</property>
+		<property>play</property>
+		<location>beach</location>
+		<location>pool</location>
+		<location>water</location>
+	</beachball>
+	<orange>
+		<property>fruit</property>
+		<property>eat</property>
+		<property>skin</property>
+		<property>peel</property>
+		<property>orange</property>
+		<location>tree</location>
+		<location>market</location>
+		<location>grocery store</location>
+		<location>kitchen</location>
+	</orange>
+	<peach>
+		<property>fruit</property>
+		<property>eat</property>
+		<property>peach</property>
+		<property>skin</property>
+		<location>tree</location>
+		<location>market</location>
+		<location>grocery store</location>
+		<location>kitchen</location>
+	</peach>
+	<apple>
+		<property>fruit</property>
+		<property>red</property>
+		<property>skin</property>
+		<property>eat</property>
+		<property>skin eat</property>
+		<location>tree</location>
+		<location>market</location>
+		<location>grocery store</location>
+		<location>kitchen</location>
+	</apple>
+</items>

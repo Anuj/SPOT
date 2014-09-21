@@ -1,0 +1,217 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>interfaceRoutines.as</title>
+<link rel="stylesheet" type="text/css" href="../SourceStyles.css"/>
+</head>
+
+<body><pre><span class="ActionScriptComment">// ActionScript file
+</span>       <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">events</span>.<span class="ActionScriptDefault_Text">Event</span>;
+       <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span>.<span class="ActionScriptDefault_Text">events</span>.<span class="ActionScriptDefault_Text">MouseEvent</span>;
+
+       
+
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">leftPrompts</span><span class="ActionScriptBracket/Brace">()</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>           
+           <span class="ActionScriptReserved">this</span>.<span class="ActionScriptDefault_Text">currentState</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;left&quot;</span>;
+           
+           <span class="ActionScriptDefault_Text">arrowleft</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/arrow.png&quot;</span>;           
+        <span class="ActionScriptDefault_Text">showImage</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">arrowleft</span><span class="ActionScriptBracket/Brace">)</span>;
+        <span class="ActionScriptDefault_Text">characterMood</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;left&quot;</span>;
+           <span class="ActionScriptDefault_Text">playVideo</span><span class="ActionScriptBracket/Brace">()</span>;
+           <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">length</span><span class="ActionScriptOperator">&gt;</span>0<span class="ActionScriptBracket/Brace">)</span>
+           <span class="ActionScriptBracket/Brace">{</span>
+               <span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">removeAll</span><span class="ActionScriptBracket/Brace">()</span>;
+           <span class="ActionScriptBracket/Brace">}</span>
+           <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/3 what is this.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+           <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/silence.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+           <span class="ActionScriptComment">//addAudio(&quot;./assets/trial loops/5 it is a cat.mp3&quot;);        
+</span>           <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/it is a &quot;</span><span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">sItem</span>.<span class="ActionScriptDefault_Text">item1</span> <span class="ActionScriptOperator">+</span><span class="ActionScriptString">&quot;.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;        
+           <span class="ActionScriptDefault_Text">playIntroAudio</span><span class="ActionScriptBracket/Brace">()</span>;
+       <span class="ActionScriptBracket/Brace">}</span>
+       
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">rightPrompts</span><span class="ActionScriptBracket/Brace">()</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>      
+           <span class="ActionScriptReserved">this</span>.<span class="ActionScriptDefault_Text">currentState</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;right&quot;</span>;
+           
+           <span class="ActionScriptDefault_Text">arrowright</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/arrow.png&quot;</span>;
+           <span class="ActionScriptDefault_Text">showImage</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">arrowright</span><span class="ActionScriptBracket/Brace">)</span>;
+           <span class="ActionScriptDefault_Text">characterMood</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;right&quot;</span>;
+           <span class="ActionScriptDefault_Text">playVideo</span><span class="ActionScriptBracket/Brace">()</span>;
+           <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">length</span><span class="ActionScriptOperator">&gt;</span>0<span class="ActionScriptBracket/Brace">)</span>
+           <span class="ActionScriptBracket/Brace">{</span>
+               <span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">removeAll</span><span class="ActionScriptBracket/Brace">()</span>;
+           <span class="ActionScriptBracket/Brace">}</span>
+           <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/3 what is this.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+           <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/silence.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;           
+           <span class="ActionScriptComment">//addAudio(&quot;./assets/trial loops/4 it is a ball.mp3&quot;);
+</span>           <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/it is a &quot;</span><span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">sItem</span>.<span class="ActionScriptDefault_Text">item2</span> <span class="ActionScriptOperator">+</span><span class="ActionScriptString">&quot;.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;                
+           <span class="ActionScriptDefault_Text">playIntroAudio</span><span class="ActionScriptBracket/Brace">()</span>;
+       <span class="ActionScriptBracket/Brace">}</span>
+       
+       <span class="ActionScriptReserved">public</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">boxSource</span><span class="ActionScriptOperator">:</span><span class="ActionScriptDefault_Text">String</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;&quot;</span>;
+       
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">reveal</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">obj</span><span class="ActionScriptOperator">:</span><span class="ActionScriptDefault_Text">String</span><span class="ActionScriptBracket/Brace">)</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>                   
+                     <span class="ActionScriptReserved">this</span>.<span class="ActionScriptDefault_Text">currentState</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;win&quot;</span>;               
+                <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">obj</span>.<span class="ActionScriptDefault_Text">indexOf</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;reveal&quot;</span><span class="ActionScriptBracket/Brace">)</span> <span class="ActionScriptOperator">==</span> <span class="ActionScriptOperator">-</span>1<span class="ActionScriptBracket/Brace">)</span>
+                <span class="ActionScriptBracket/Brace">{</span>
+                        
+                    <span class="ActionScriptDefault_Text">boxSource</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/images/&quot;</span><span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">obj</span> <span class="ActionScriptOperator">+</span><span class="ActionScriptString">&quot;.jpeg&quot;</span>;
+                                                      
+                <span class="ActionScriptBracket/Brace">}</span>
+                <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">length</span><span class="ActionScriptOperator">&gt;</span>0<span class="ActionScriptBracket/Brace">)</span>
+                   <span class="ActionScriptBracket/Brace">{</span>
+                       <span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">removeAll</span><span class="ActionScriptBracket/Brace">()</span>;
+                   <span class="ActionScriptBracket/Brace">}</span>
+                   <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/12 lets open up the box and see.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+                   <span class="ActionScriptDefault_Text">playIntroAudio</span><span class="ActionScriptBracket/Brace">()</span>;
+                   <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">revealTimer</span><span class="ActionScriptOperator">:</span><span class="ActionScriptDefault_Text">Timer</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Timer</span><span class="ActionScriptBracket/Brace">(</span>6000, 1<span class="ActionScriptBracket/Brace">)</span>;
+                <span class="ActionScriptDefault_Text">revealTimer</span>.<span class="ActionScriptDefault_Text">addEventListener</span><span class="ActionScriptBracket/Brace">(T</span><span class="ActionScriptDefault_Text">imerEvent</span>.<span class="ActionScriptDefault_Text">TIMER_COMPLETE</span>, <span class="ActionScriptDefault_Text">revealHandler</span><span class="ActionScriptBracket/Brace">)</span>;
+                <span class="ActionScriptDefault_Text">revealTimer</span>.<span class="ActionScriptDefault_Text">start</span><span class="ActionScriptBracket/Brace">()</span>;
+               
+                
+       <span class="ActionScriptBracket/Brace">}</span>
+       
+       
+       
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">revealHandler</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">event</span><span class="ActionScriptOperator">:</span><span class="ActionScriptDefault_Text">Event</span><span class="ActionScriptBracket/Brace">)</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>
+                   
+                <span class="ActionScriptComment">//box.source = &quot;./assets/&quot;+ obj +&quot;.jpg&quot;;
+</span>                    
+                <span class="ActionScriptDefault_Text">box</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">boxSource</span>;
+                <span class="ActionScriptDefault_Text">box</span>.<span class="ActionScriptDefault_Text">visible</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">true</span>;                                  
+                                                  
+                <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">length</span><span class="ActionScriptOperator">&gt;</span>0<span class="ActionScriptBracket/Brace">)</span>
+                   <span class="ActionScriptBracket/Brace">{</span>
+                       <span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">removeAll</span><span class="ActionScriptBracket/Brace">()</span>;
+                   <span class="ActionScriptBracket/Brace">}</span>
+                   <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/applause.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;        
+                   <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/conclusion/that was fun thank you for playing with me.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+                   <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">sReader</span>.<span class="ActionScriptDefault_Text">syllabusItemCounter</span> <span class="ActionScriptOperator">&lt;</span> 9<span class="ActionScriptBracket/Brace">)</span>
+                   <span class="ActionScriptBracket/Brace">{</span>
+                       <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/13 lets play again.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+                   <span class="ActionScriptBracket/Brace">}</span>
+                   <span class="ActionScriptDefault_Text">playIntroAudio</span><span class="ActionScriptBracket/Brace">()</span>;
+       <span class="ActionScriptBracket/Brace">}</span>
+       
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">edge</span><span class="ActionScriptBracket/Brace">()</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>
+             <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">length</span><span class="ActionScriptOperator">&gt;</span>0<span class="ActionScriptBracket/Brace">)</span>
+             <span class="ActionScriptBracket/Brace">{</span>
+                   <span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">removeAll</span><span class="ActionScriptBracket/Brace">()</span>;
+          <span class="ActionScriptBracket/Brace">}</span>
+          <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">r</span><span class="ActionScriptOperator">:</span><span class="ActionScriptDefault_Text">int</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">rand</span><span class="ActionScriptBracket/Brace">(</span>1,3<span class="ActionScriptBracket/Brace">)</span>;
+          <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">r</span><span class="ActionScriptOperator">==</span>1<span class="ActionScriptBracket/Brace">)</span>
+          <span class="ActionScriptBracket/Brace">{</span>
+              <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/edge cases/i love this game.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+          <span class="ActionScriptBracket/Brace">}</span>
+          <span class="ActionScriptReserved">else</span> <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">r</span><span class="ActionScriptOperator">==</span>2<span class="ActionScriptBracket/Brace">)</span>
+          <span class="ActionScriptBracket/Brace">{</span>
+              <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/edge cases/lets play.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+          <span class="ActionScriptBracket/Brace">}</span>
+          <span class="ActionScriptReserved">else</span> <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">r</span><span class="ActionScriptOperator">==</span>3<span class="ActionScriptBracket/Brace">)</span>
+          <span class="ActionScriptBracket/Brace">{</span>
+              <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/edge cases/this is my favorite game.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+          <span class="ActionScriptBracket/Brace">}</span>             
+          <span class="ActionScriptDefault_Text">playIntroAudio</span><span class="ActionScriptBracket/Brace">()</span>;
+       <span class="ActionScriptBracket/Brace">}</span>
+       
+       
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">game</span><span class="ActionScriptBracket/Brace">()</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>
+               <span class="ActionScriptDefault_Text">sItem</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">sReader</span>.<span class="ActionScriptDefault_Text">getNextSyllabusItem</span><span class="ActionScriptBracket/Brace">()</span>;
+            <span class="ActionScriptComment">//Alert.show(sItem.item1); 
+</span>            <span class="ActionScriptDefault_Text">determineCharacterMood</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;neutral&quot;</span><span class="ActionScriptBracket/Brace">)</span>;           
+               <span class="ActionScriptReserved">this</span>.<span class="ActionScriptDefault_Text">currentState</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;game&quot;</span>;
+            <span class="ActionScriptDefault_Text">obj1</span>.<span class="ActionScriptDefault_Text">x</span><span class="ActionScriptOperator">=</span>0;
+            <span class="ActionScriptDefault_Text">obj1</span>.<span class="ActionScriptDefault_Text">y</span><span class="ActionScriptOperator">=</span>0;
+            <span class="ActionScriptDefault_Text">obj2</span>.<span class="ActionScriptDefault_Text">x</span><span class="ActionScriptOperator">=</span>647;
+            <span class="ActionScriptDefault_Text">obj2</span>.<span class="ActionScriptDefault_Text">y</span><span class="ActionScriptOperator">=</span>0;
+            <span class="ActionScriptDefault_Text">hideImage</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">box</span><span class="ActionScriptBracket/Brace">)</span>;    
+            <span class="ActionScriptComment">//obj1.source = &quot;./assets/cat.jpg&quot;;
+</span>            <span class="ActionScriptDefault_Text">obj1</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/images/&quot;</span><span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">sItem</span>.<span class="ActionScriptDefault_Text">item1</span> <span class="ActionScriptOperator">+</span><span class="ActionScriptString">&quot;.jpeg&quot;</span>;
+            <span class="ActionScriptDefault_Text">showImage</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">obj1</span><span class="ActionScriptBracket/Brace">)</span>;
+            <span class="ActionScriptComment">//obj2.source = &quot;./assets/ball.jpg&quot;;
+</span>            <span class="ActionScriptDefault_Text">obj2</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/images/&quot;</span><span class="ActionScriptOperator">+</span> <span class="ActionScriptDefault_Text">sItem</span>.<span class="ActionScriptDefault_Text">item2</span> <span class="ActionScriptOperator">+</span><span class="ActionScriptString">&quot;.jpeg&quot;</span>;
+            <span class="ActionScriptDefault_Text">showImage</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">obj2</span><span class="ActionScriptBracket/Brace">)</span>;
+            <span class="ActionScriptDefault_Text">snd</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Sound</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">URLRequest</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/2 hmm what items do we have to choose from.mp3&quot;</span><span class="ActionScriptBracket/Brace">))</span>;
+            <span class="ActionScriptDefault_Text">snd</span>.<span class="ActionScriptDefault_Text">play</span><span class="ActionScriptBracket/Brace">()</span>;
+            <span class="ActionScriptDefault_Text">snd</span>.<span class="ActionScriptDefault_Text">addEventListener</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">Event</span>.<span class="ActionScriptDefault_Text">OPEN</span>, <span class="ActionScriptDefault_Text">openSoundHandler</span><span class="ActionScriptBracket/Brace">)</span>;
+            <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">channel</span><span class="ActionScriptOperator">:</span><span class="ActionScriptDefault_Text">SoundChannel</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptDefault_Text">snd</span>.<span class="ActionScriptDefault_Text">play</span><span class="ActionScriptBracket/Brace">()</span>;
+            <span class="ActionScriptDefault_Text">channel</span>.<span class="ActionScriptDefault_Text">addEventListener</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">Event</span>.<span class="ActionScriptDefault_Text">SOUND_COMPLETE</span>, <span class="ActionScriptDefault_Text">introSoundHandler</span><span class="ActionScriptBracket/Brace">)</span>;            
+       <span class="ActionScriptBracket/Brace">}</span>
+       
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">intro</span><span class="ActionScriptBracket/Brace">()</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>               
+               <span class="ActionScriptDefault_Text">characterMood</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;intro&quot;</span>;
+               <span class="ActionScriptReserved">this</span>.<span class="ActionScriptDefault_Text">currentState</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;intro&quot;</span>;       
+               <span class="ActionScriptDefault_Text">callout</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/callout.png&quot;</span>;
+               <span class="ActionScriptDefault_Text">showImage</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">callout</span><span class="ActionScriptBracket/Brace">)</span>;        
+            <span class="ActionScriptComment">//playVideo();   
+</span>            <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">length</span><span class="ActionScriptOperator">&gt;</span>0<span class="ActionScriptBracket/Brace">)</span>
+               <span class="ActionScriptBracket/Brace">{</span>
+                   <span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">removeAll</span><span class="ActionScriptBracket/Brace">()</span>;
+               <span class="ActionScriptBracket/Brace">}</span>
+            <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/introduction/hi my name is spot.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+            <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/0 im going to show you two items.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+            <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/1 lets begin.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+            <span class="ActionScriptDefault_Text">playIntroAudio</span><span class="ActionScriptBracket/Brace">()</span>;
+       <span class="ActionScriptBracket/Brace">}</span>
+     
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">startGame</span><span class="ActionScriptBracket/Brace">()</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>
+                   <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">length</span><span class="ActionScriptOperator">&gt;</span>0<span class="ActionScriptBracket/Brace">)</span>
+                   <span class="ActionScriptBracket/Brace">{</span>
+                       <span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">removeAll</span><span class="ActionScriptBracket/Brace">()</span>;
+                   <span class="ActionScriptBracket/Brace">}</span>
+                   <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/6 i am going to choose one of these things.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+                <span class="ActionScriptDefault_Text">playIntroAudio</span><span class="ActionScriptBracket/Brace">()</span>;
+                <span class="ActionScriptDefault_Text">hideImage</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">arrowleft</span><span class="ActionScriptBracket/Brace">)</span>;
+                <span class="ActionScriptDefault_Text">hideImage</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">arrowright</span><span class="ActionScriptBracket/Brace">)</span>;
+                <span class="ActionScriptDefault_Text">obj1</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/qm.png&quot;</span>;
+                <span class="ActionScriptDefault_Text">obj2</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/qm.png&quot;</span>;
+                
+                <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">myTimer1</span><span class="ActionScriptOperator">:</span><span class="ActionScriptDefault_Text">Timer</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Timer</span><span class="ActionScriptBracket/Brace">(</span>5000, 1<span class="ActionScriptBracket/Brace">)</span>;
+                <span class="ActionScriptDefault_Text">myTimer1</span>.<span class="ActionScriptDefault_Text">addEventListener</span><span class="ActionScriptBracket/Brace">(T</span><span class="ActionScriptDefault_Text">imerEvent</span>.<span class="ActionScriptDefault_Text">TIMER_COMPLETE</span>, <span class="ActionScriptDefault_Text">timerHandler</span><span class="ActionScriptBracket/Brace">)</span>;
+                <span class="ActionScriptDefault_Text">myTimer1</span>.<span class="ActionScriptDefault_Text">start</span><span class="ActionScriptBracket/Brace">()</span>;                         
+       <span class="ActionScriptBracket/Brace">}</span>               
+       
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">characterHappy</span><span class="ActionScriptBracket/Brace">()</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>
+                
+                     <span class="ActionScriptReserved">this</span>.<span class="ActionScriptDefault_Text">currentState</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;box&quot;</span>;
+                <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">rand</span><span class="ActionScriptBracket/Brace">(</span>1,2<span class="ActionScriptBracket/Brace">)</span><span class="ActionScriptOperator">==</span>1<span class="ActionScriptBracket/Brace">)</span>
+                <span class="ActionScriptBracket/Brace">{</span>
+                    <span class="ActionScriptDefault_Text">videoDisplay</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/hyper.mp4&quot;</span>;
+                                        
+                <span class="ActionScriptBracket/Brace">}</span>
+                <span class="ActionScriptReserved">else</span>
+                <span class="ActionScriptBracket/Brace">{</span>
+                    <span class="ActionScriptDefault_Text">videoDisplay</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/playful.mp4&quot;</span>;
+                <span class="ActionScriptBracket/Brace">}</span>
+                <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">length</span><span class="ActionScriptOperator">&gt;</span>0<span class="ActionScriptBracket/Brace">)</span>
+                <span class="ActionScriptBracket/Brace">{</span>
+                           <span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">removeAll</span><span class="ActionScriptBracket/Brace">()</span>;
+                <span class="ActionScriptBracket/Brace">}</span>
+               <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/9 yes great question.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+               <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/11 ask another question or just guess.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+               <span class="ActionScriptDefault_Text">playIntroAudio</span><span class="ActionScriptBracket/Brace">()</span>;
+       <span class="ActionScriptBracket/Brace">}</span>
+       
+       <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">characterSad</span><span class="ActionScriptBracket/Brace">()</span><span class="ActionScriptOperator">:</span><span class="ActionScriptReserved">void</span>
+       <span class="ActionScriptBracket/Brace">{</span>
+                    <span class="ActionScriptReserved">this</span>.<span class="ActionScriptDefault_Text">currentState</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;box&quot;</span>;                
+                <span class="ActionScriptDefault_Text">videoDisplay</span>.<span class="ActionScriptDefault_Text">source</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptString">&quot;./assets/headshake.mp4&quot;</span>;
+                <span class="ActionScriptReserved">if</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">length</span><span class="ActionScriptOperator">&gt;</span>0<span class="ActionScriptBracket/Brace">)</span>
+                <span class="ActionScriptBracket/Brace">{</span>
+                           <span class="ActionScriptDefault_Text">audioQueue</span>.<span class="ActionScriptDefault_Text">removeAll</span><span class="ActionScriptBracket/Brace">()</span>;
+                <span class="ActionScriptBracket/Brace">}</span>
+                <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/10 no keep going doing well.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+                <span class="ActionScriptDefault_Text">addAudio</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptString">&quot;./assets/trial loops/11 ask another question or just guess.mp3&quot;</span><span class="ActionScriptBracket/Brace">)</span>;
+                <span class="ActionScriptDefault_Text">playIntroAudio</span><span class="ActionScriptBracket/Brace">()</span>;                
+       <span class="ActionScriptBracket/Brace">}</span></pre></body>
+</html>

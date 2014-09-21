@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<syllabus>
+
+<pair>
+    <difficulty>easy</difficulty> 
+	<item1>cat</item1>
+	<item2>ball</item2>
+</pair>
+
+<pair>
+    <difficulty>easy</difficulty> 
+	<item1>spoon</item1>
+	<item2>elephant</item2>
+</pair>
+
+<pair>
+	<difficulty>medium</difficulty> 
+	<item1>table</item1>
+	<item2>bed</item2>
+</pair>
+
+<pair>
+	<difficulty>hard</difficulty> 
+	<item1>apple</item1>
+	<item2>orange</item2>
+</pair>
+
+<pair>
+    <difficulty>easy</difficulty> 
+	<item1>book</item1>
+	<item2>banana</item2>
+</pair>
+
+<pair>
+	<difficulty>medium</difficulty> 
+	<item1>chicken</item1>
+	<item2>pig</item2>
+</pair>
+
+<pair>
+	<difficulty>hard</difficulty> 
+	<item1>clock</item1>
+	<item2>watch</item2>
+</pair>
+
+<pair>
+    <difficulty>easy</difficulty> 
+	<item1>flower</item1>
+	<item2>kite</item2>
+</pair>
+
+<pair>
+	<difficulty>medium</difficulty> 
+	<item1>shoe</item1>
+	<item2>hat</item2>
+</pair>
+
+<pair>
+	<difficulty>hard</difficulty> 
+	<item1>bicycle</item1>
+	<item2>car</item2>
+</pair>
+
+</syllabus>

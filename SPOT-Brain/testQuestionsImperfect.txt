@@ -1,0 +1,824 @@
+bed
+is it something we can eat?
+no
+is it something you could sleep in?
+yes
+table
+is it something we can eat?
+no
+is it something you could sleep in?
+no
+orange
+is it something we can eat?
+yes
+is it an orange?
+reveal
+peach
+is it something we can eat?
+yes
+is it an orange?
+no
+elephant
+is it something we can look at the zoo?
+yes
+Is it in a different?
+reveal
+spoon
+is it something we can look at the zoo?
+no
+Is it in a different?
+no
+hat
+is it something we can ban our heads?
+yes
+is it a hat?
+reveal
+boot
+is it something we can ban our heads?
+no
+is it a hat?
+no
+car
+is it something we can ride with a helmet?
+no
+is it a bicycle?
+no
+bicycle
+is it something we can ride with a helmet?
+yes
+is it a bicycle?
+reveal
+cat
+does it mean now?
+yes
+does it bonds?
+no
+ball
+does it mean now?
+no
+does it bonds?
+yes
+PTA to ball gowns
+edge
+banana
+do you read it?
+no
+do you eat it?
+yes
+is it a banana?
+reveal
+book
+do you read it?
+yes
+do you eat it?
+no
+is it a banana?
+no
+bed
+do you eat breakfast on it?
+no
+is it a table?
+no
+table
+do you eat breakfast on it?
+yes
+is it a table?
+reveal
+apple
+does it have skin that you can not eat?
+no
+does it have skin that you can eat?
+yes
+orange
+does it have skin that you can not eat?
+yes
+does it have skin that you can eat?
+no
+elephant
+does it have a trunk?
+yes
+is it the elephant?
+reveal
+spoon
+does it have a trunk?
+no
+is it the elephant?
+no
+boot
+i am wearing sneaker boots
+edge
+boot
+do you read it on your head?
+no
+is it the hat?
+no
+hat
+i am wearing sneaker boots
+edge
+do you read it on your head?
+yes
+is it the hat?
+reveal
+car
+does it have a steering wheel?
+yes
+is it a car?
+reveal
+bicycle
+does it have a steering wheel?
+no
+is it a car?
+no
+spoon
+is it black?
+no
+is it a spoon?
+reveal
+elephant
+is it black?
+no
+is it a spoon?
+no
+hat
+is it brown?
+yes
+does it go on your foot?
+no
+boot
+is it brown?
+yes
+does it go on your foot?
+yes
+bicycle
+is that, does that, do you ride it with your feet?
+yes
+do you drive?
+no
+what is it?
+edge
+car
+is that, does that, do you ride it with your feet?
+no
+do you drive?
+yes
+what is it?
+edge
+banana
+is it yellow?
+yes
+book
+is it yellow?
+no
+car
+is that a something that is red, but you drive it?
+yes
+bicycle
+is that a something that is red, but you drive it?
+no
+banana
+is that a banana?
+reveal
+is that yellow?
+yes
+book
+is that a banana?
+no
+is that yellow?
+no
+boot
+is that a brown thing that you wear on your head?
+no
+hat
+is that a brown thing that you wear on your head?
+yes
+cat
+is that the cat?
+reveal
+does it roll?
+no
+beachball
+is that the cat?
+no
+does it roll?
+yes
+elephant
+is it green?
+yes
+is it be a listen?
+reveal
+spoon
+is it green?
+no
+is it be listen?
+no
+boot
+do people wear that on their heads?
+no
+do the vatican defeat?
+yes
+is it the shoe
+reveal
+hat
+do people wear that on their heads?
+yes
+do the vatican defeat?
+no
+is it the shoe?
+no
+car
+is that, does that have bills?
+yes
+does it have an engine?
+yes
+bicycle
+is that, does that have bills?
+yes
+does it have an engine?
+no
+book
+is that yellow?
+no
+does it have beaches?
+yes
+banana
+is that yellow?
+yes
+does it have beaches?
+no
+bed
+is that a bed?
+reveal
+do people sleep in that?
+yes
+do people eat on it?
+no
+table
+is that a bed?
+no
+do people sleep in that?
+no
+do people eat on it?
+yes
+orange
+is that orange?
+reveal
+is it red?
+no
+apple
+is that orange?
+no
+is it red?
+yes
+cat
+is it free?
+yes
+beachball
+is it free?
+no
+elephant
+is it funny?
+no
+is it the elephant?
+reveal
+is it a spoon
+no
+is it small?
+no
+i have a soccer ball with hair
+edge
+does it have hair?
+no
+my mom has a necklace
+edge
+spoon
+is it funny?
+no
+is it the elephant?
+no
+is it a spoon
+reveal
+is it small?
+yes
+i have a soccer ball with hair
+edge
+does it have hair?
+no
+my mom has a necklace
+edge
+hat
+is it a hat?
+reveal
+is it furry?
+no
+is it a hat?
+reveal
+boot
+is it a hat?
+no
+is it furry?
+no
+is it a hat?
+no
+car
+is it a bike?
+no
+does it have fur?
+no
+is it the car?
+reveal
+is it a bike?
+no
+bicycle
+is it a bike?
+reveal
+does it have fur?
+no
+is it the car?
+no
+is it a bike?
+reveal
+book
+does it asking?
+no
+is it a banana?
+no
+banana
+does it asking?
+yes
+is it a banana?
+reveal
+bed
+is it free?
+no
+is it hard?
+no
+is it a table?
+no
+table
+is it free?
+no
+is it hard?
+yes
+is it a table?
+reveal
+orange
+does it have for?
+no
+does it asking?
+yes
+is it a banana?
+no
+is it an orange?
+reveal
+is it blue?
+no
+is it black?
+no
+is it yellow?
+no
+is it pink?
+no
+is it the apple?
+no
+apple
+does it have for?
+no
+does it asking?
+yes
+is it a banana?
+no
+is it an orange?
+no
+is it blue?
+no
+is it black?
+no
+is it yellow?
+no
+is it pink?
+no
+is it the apple?
+reveal
+elephant
+does it have big ears?
+yes
+spoon
+does it have big ears?
+no
+my pumpkin keeps slipping off the other one
+edge
+bicycle
+does that have a wheel?
+yes
+is it inside of it?
+no
+car
+does that have a wheel?
+yes
+is it inside of it?
+yes
+banana
+does it turn?
+no
+does it feel?
+yes
+book
+does it turn?
+yes
+does it feel?
+no
+table
+can you lay on it?
+no
+can you turn it?
+yes
+do people sleep on it?
+no
+is it something that we sit down now?
+yes
+bed
+can you lay on it?
+yes
+can you turn it?
+yes
+do people sleep on it?
+yes
+is it something that we sit down now?
+no
+apple
+do they have the same color?
+no
+is it yellow?
+no
+is it red?
+yes
+orange
+do they have the same color?
+no
+is it yellow?
+no
+is it red?
+no
+elephant
+is it, does it start with the letter e?
+yes
+spoon
+is it, does it start with the letter e?
+no
+boot
+does it start with letter h?
+no
+do you put it on your head?
+no
+is that a hat?
+no
+hat
+does it start with letter h?
+yes
+do you put it on your head?
+yes
+is that a hat?
+reveal
+car
+do you have to pedal?
+no
+do you have to pedal it to a library?
+no
+bicycle
+do you have to pedal?
+yes
+do you have to pedal it to a library?
+yes
+book
+do you eat with it?
+no
+do you read it?
+yes
+banana
+do you eat with it?
+yes
+do you read it?
+no
+table
+do we sleep in it?
+no
+do we eat on it?
+yes
+bed
+do we sleep in it?
+yes
+do we eat on it?
+no
+apple
+do we feel it?
+no
+does it umm is it red?
+yes
+orange
+do we feel it?
+yes
+does it umm is it red?
+no
+cat
+does it run?
+yes
+can it be played in the water?
+no
+beachball
+does it run?
+no
+can it be played in the water?
+yes
+book
+can you read it?
+yes
+flower
+can you read it?
+no
+we have two dogs, one has a bone
+edge
+bear
+does it live in a cave
+yes
+is it a bear
+reveal
+dog
+does it live in a cave
+no
+is it a bear?
+no
+truck
+is it a truck?
+reveal
+is it long?
+yes
+is it a truck?
+reveal
+car
+is it a truck
+no
+is it long
+no
+is it a truck
+no
+flower
+can I feel in the sky?
+no
+is it a kite
+no
+kite
+can I feel in the sky?
+yes
+is it  a kite
+reveal
+chicken
+does it have a tail?
+no
+is it a big?
+no
+pig
+does it have a tail?
+yes
+is it a big?
+reveal
+clock
+a watch?
+no
+do you put it on your wrist?
+no
+does it go on the wall?
+yes
+is it the clock?
+reveal
+watch
+a watch?
+reveal
+do you put it on your wrist?
+yes
+does it go on the wall?
+no
+is it the clock?
+no
+cat
+does it have ears?
+yes
+ball
+does it have ears?
+no
+flower
+does it have a scam?
+yes
+does it have paper?
+no
+is it a book
+no
+book
+does it have a scam?
+no
+does it have paper?
+yes
+is it a book?
+reveal
+dog
+does it have ears?
+yes
+does it have a bone?
+yes
+bear
+does it have ears?
+yes
+does it have a bone?
+no
+car
+does it carry a lot of stuff?
+no
+is it a truck?
+no
+truck
+does it carry a lot of stuff?
+yes
+is it a truck
+reveal
+kite
+does it have a stamp?
+no
+is it a flower
+no
+flower
+does it have a stamp
+yes
+is it a flower
+reveal
+pig
+is it pink?
+yes
+is it brown?
+no
+chicken
+is it pink?
+no
+is it brown?
+no
+does it make point blank sounds
+no
+pig
+is it pink?
+yes
+is it brown?
+no
+does it make point blank sounds
+yes
+clock
+does it have a black thing around it
+yes
+is it a clock
+reveal
+watch
+does it have a black thing around it
+no
+is it a clock
+no
+cat
+does it mean now
+yes
+do you cheese with it
+yes
+beachball
+does it mean now
+no
+do you cheese with it
+no
+book
+is it from your garden
+no
+do you read it
+yes
+does it have beaches
+yes
+does it have some letters
+yes
+does it have pictures
+yes
+flower
+is it from your garden
+yes
+do you read it
+no
+does it have beaches
+no
+does it have some letters
+no
+does it have pictures
+no
+bear
+does it roar?
+yes
+does it have claws?
+yes
+does it get fish?
+yes
+does it app fur?
+yes
+does it have sharp teeth?
+yes
+does it find fish in the water?
+yes
+dog
+does it roar?
+no
+does it have claws?
+no
+does it get fish?
+no
+does it app fur?
+yes
+does it have sharp teeth?
+yes
+does it find fish in the water?
+no
+truck
+is it pink?
+no
+does it drive fast?
+no
+does it have no harm?
+no
+is it a car?
+no
+car
+is it pink?
+no
+does it drive fast
+yes
+does it have no harm?
+no
+is it a car?
+reveal
+spot you have to take a nappy
+edge
+flower
+does it fly?
+no
+does it have a spring?
+no
+do you have to pull it do not let it fly away?
+no
+is it a kite?
+no
+kite
+does it fly?
+yes
+does it have a spring?
+yes
+do you have to pull it do not let it fly away?
+yes
+is it a kite?
+reveal
+chicken
+does it lay eggs?
+yes
+does it going?
+no
+does it have a great detail?
+no
+does it have a flat nose?
+no
+does it like to roll in mud?
+no
+is it a pig?
+no
+pig
+does it lay eggs?
+no
+does it going?
+yes
+does it have a great detail?
+yes
+does it have a flat nose?
+yes
+does it like to roll in mud?
+yes
+is it a pig?
+reveal
+clock
+does it go on your wrist?
+no
+does it stick on the wall?
+yes
+does it tick-tock?
+yes
+is it circular?
+yes
+is it a clock?
+reveal
+watch
+does it go on your wrist?
+yes
+does it stick on the wall?
+no
+does it tick-tock?
+yes
+is it circular?
+no
+is it a clock?
+no

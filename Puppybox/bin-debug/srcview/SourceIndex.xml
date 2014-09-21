@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+	<title>Source of Puppybox</title>
+	<nodes>
+		<node label="libs">
+		</node>
+		<node icon="classpathIcon" label="src" expanded="true">
+			<node icon="actionScriptIcon" label="audio.as" url="source/audio.as.html"/>
+			<node icon="actionScriptIcon" label="interfaceRoutines.as" url="source/interfaceRoutines.as.html"/>
+			<node label="Puppybox-app.xml" url="source/Puppybox-app.xml.txt"/>
+			<node icon="mxmlAppIcon" selected="true" label="Puppybox.mxml" url="source/Puppybox.mxml.html"/>
+			<node icon="actionScriptIcon" label="socketConnection.as" url="source/socketConnection.as.html"/>
+			<node icon="actionScriptIcon" label="syllabusItem.as" url="source/syllabusItem.as.html"/>
+			<node icon="actionScriptIcon" label="syllabusReader.as" url="source/syllabusReader.as.html"/>
+		</node>
+		<node label="test">
+			<node label="assets">
+				<node label="conclusion">
+					<node label="that was fun thank you for playing with me.mp3" url="source/test/assets/conclusion/that was fun thank you for playing with me.mp3"/>
+				</node>
+				<node label="edge cases">
+					<node label="i love this game.mp3" url="source/test/assets/edge cases/i love this game.mp3"/>
+					<node label="lets play.mp3" url="source/test/assets/edge cases/lets play.mp3"/>
+					<node label="this is my favorite game.mp3" url="source/test/assets/edge cases/this is my favorite game.mp3"/>
+				</node>
+				<node label="introduction">
+					<node label="heres how we play the game.mp3" url="source/test/assets/introduction/heres how we play the game.mp3"/>
+					<node label="hi my name is spot.mp3" url="source/test/assets/introduction/hi my name is spot.mp3"/>
+					<node label="i will show you two things.mp3" url="source/test/assets/introduction/i will show you two things.mp3"/>
+				</node>
+				<node label="trial loops">
+					<node label="0 im going to show you two items.mp3" url="source/test/assets/trial loops/0 im going to show you two items.mp3"/>
+					<node label="1 lets begin.mp3" url="source/test/assets/trial loops/1 lets begin.mp3"/>
+					<node label="10 no keep going doing well.mp3" url="source/test/assets/trial loops/10 no keep going doing well.mp3"/>
+					<node label="11 ask another question or just guess.mp3" url="source/test/assets/trial loops/11 ask another question or just guess.mp3"/>
+					<node label="12 lets open up the box and see.mp3" url="source/test/assets/trial loops/12 lets open up the box and see.mp3"/>
+					<node label="13 lets play again.mp3" url="source/test/assets/trial loops/13 lets play again.mp3"/>
+					<node label="2 hmm what items do we have to choose from.mp3" url="source/test/assets/trial loops/2 hmm what items do we have to choose from.mp3"/>
+					<node label="3 what is this.mp3" url="source/test/assets/trial loops/3 what is this.mp3"/>
+					<node label="6 i am going to choose one of these things.mp3" url="source/test/assets/trial loops/6 i am going to choose one of these things.mp3"/>
+					<node label="7 ive hidden one of the things in the box.mp3" url="source/test/assets/trial loops/7 ive hidden one of the things in the box.mp3"/>
+					<node label="8 its your turn ask me a question or guess.mp3" url="source/test/assets/trial loops/8 its your turn ask me a question or guess.mp3"/>
+					<node label="9 yes great question.mp3" url="source/test/assets/trial loops/9 yes great question.mp3"/>
+					<node label="it is a apple.mp3" url="source/test/assets/trial loops/it is a apple.mp3"/>
+					<node label="it is a ball.mp3" url="source/test/assets/trial loops/it is a ball.mp3"/>
+					<node label="it is a banana.mp3" url="source/test/assets/trial loops/it is a banana.mp3"/>
+					<node label="it is a bed.mp3" url="source/test/assets/trial loops/it is a bed.mp3"/>
+					<node label="it is a bicycle.mp3" url="source/test/assets/trial loops/it is a bicycle.mp3"/>
+					<node label="it is a book.mp3" url="source/test/assets/trial loops/it is a book.mp3"/>
+					<node label="it is a car.mp3" url="source/test/assets/trial loops/it is a car.mp3"/>
+					<node label="it is a cat.mp3" url="source/test/assets/trial loops/it is a cat.mp3"/>
+					<node label="it is a chicken.mp3" url="source/test/assets/trial loops/it is a chicken.mp3"/>
+					<node label="it is a clock.mp3" url="source/test/assets/trial loops/it is a clock.mp3"/>
+					<node label="it is a elephant.mp3" url="source/test/assets/trial loops/it is a elephant.mp3"/>
+					<node label="it is a flower.mp3" url="source/test/assets/trial loops/it is a flower.mp3"/>
+					<node label="it is a hat.mp3" url="source/test/assets/trial loops/it is a hat.mp3"/>
+					<node label="it is a kite.mp3" url="source/test/assets/trial loops/it is a kite.mp3"/>
+					<node label="it is a orange.mp3" url="source/test/assets/trial loops/it is a orange.mp3"/>
+					<node label="it is a pig.mp3" url="source/test/assets/trial loops/it is a pig.mp3"/>
+					<node label="it is a shoe.mp3" url="source/test/assets/trial loops/it is a shoe.mp3"/>
+					<node label="it is a spoon.mp3" url="source/test/assets/trial loops/it is a spoon.mp3"/>
+					<node label="it is a table.mp3" url="source/test/assets/trial loops/it is a table.mp3"/>
+					<node label="it is a watch.mp3" url="source/test/assets/trial loops/it is a watch.mp3"/>
+				</node>
+				<node label="applause.mp3" url="source/test/assets/applause.mp3"/>
+				<node icon="imageIcon" label="apple.png" url="source/test/assets/apple.png.html"/>
+				<node icon="imageIcon" label="arrow.png" url="source/test/assets/arrow.png.html"/>
+				<node icon="imageIcon" label="baby.png" url="source/test/assets/baby.png.html"/>
+				<node icon="imageIcon" label="ball.jpg" url="source/test/assets/ball.jpg.html"/>
+				<node icon="imageIcon" label="banana.png" url="source/test/assets/banana.png.html"/>
+				<node icon="imageIcon" label="bed.png" url="source/test/assets/bed.png.html"/>
+				<node icon="imageIcon" label="bicycle.png" url="source/test/assets/bicycle.png.html"/>
+				<node icon="imageIcon" label="book.png" url="source/test/assets/book.png.html"/>
+				<node icon="imageIcon" label="box.jpg" url="source/test/assets/box.jpg.html"/>
+				<node icon="imageIcon" label="box.png" url="source/test/assets/box.png.html"/>
+				<node icon="imageIcon" label="bread.png" url="source/test/assets/bread.png.html"/>
+				<node icon="imageIcon" label="callout.png" url="source/test/assets/callout.png.html"/>
+				<node icon="imageIcon" label="car.png" url="source/test/assets/car.png.html"/>
+				<node icon="imageIcon" label="cat.jpg" url="source/test/assets/cat.jpg.html"/>
+				<node icon="imageIcon" label="chicken realistic.png" url="source/test/assets/chicken realistic.png.html"/>
+				<node icon="imageIcon" label="chicken.png" url="source/test/assets/chicken.png.html"/>
+				<node icon="imageIcon" label="clock.png" url="source/test/assets/clock.png.html"/>
+				<node icon="imageIcon" label="elephant realistic.png" url="source/test/assets/elephant realistic.png.html"/>
+				<node icon="imageIcon" label="elephant.png" url="source/test/assets/elephant.png.html"/>
+				<node icon="imageIcon" label="flower.png" url="source/test/assets/flower.png.html"/>
+				<node icon="imageIcon" label="hat.png" url="source/test/assets/hat.png.html"/>
+				<node label="headshake.mp4" url="source/test/assets/headshake.mp4"/>
+				<node label="hyper.mp4" url="source/test/assets/hyper.mp4"/>
+				<node icon="imageIcon" label="kite.png" url="source/test/assets/kite.png.html"/>
+				<node label="lazy.mp4" url="source/test/assets/lazy.mp4"/>
+				<node label="left.mp4" url="source/test/assets/left.mp4"/>
+				<node label="loyal.mp4" url="source/test/assets/loyal.mp4"/>
+				<node label="neat.mp4" url="source/test/assets/neat.mp4"/>
+				<node icon="imageIcon" label="orange.png" url="source/test/assets/orange.png.html"/>
+				<node icon="imageIcon" label="pig.png" url="source/test/assets/pig.png.html"/>
+				<node label="playful.mp4" url="source/test/assets/playful.mp4"/>
+				<node icon="imageIcon" label="qm.png" url="source/test/assets/qm.png.html"/>
+				<node icon="imageIcon" label="right.jpg" url="source/test/assets/right.jpg.html"/>
+				<node label="right.mp4" url="source/test/assets/right.mp4"/>
+				<node icon="imageIcon" label="right.png" url="source/test/assets/right.png.html"/>
+				<node label="shy.mp4" url="source/test/assets/shy.mp4"/>
+				<node label="silence.mp3" url="source/test/assets/silence.mp3"/>
+				<node icon="imageIcon" label="spoon.png" url="source/test/assets/spoon.png.html"/>
+				<node label="still.mp4" url="source/test/assets/still.mp4"/>
+				<node label="syllabus.xml" url="source/test/assets/syllabus.xml.txt"/>
+				<node icon="imageIcon" label="table.png" url="source/test/assets/table.png.html"/>
+				<node label="talk.mp4" url="source/test/assets/talk.mp4"/>
+				<node icon="imageIcon" label="watch.png" url="source/test/assets/watch.png.html"/>
+				<node icon="imageIcon" label="winner.jpg" url="source/test/assets/winner.jpg.html"/>
+				<node icon="imageIcon" label="wrong.png" url="source/test/assets/wrong.png.html"/>
+			</node>
+			<node label="yes1.mp3" url="source/test/yes1.mp3"/>
+			<node label="yes2.mp3" url="source/test/yes2.mp3"/>
+		</node>
+	</nodes>
+</index>

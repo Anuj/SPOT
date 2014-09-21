@@ -1,0 +1,87 @@
+8
+
+dir
+3
+https://puppy-box-game.googlecode.com/svn/trunk/Puppybox
+https://puppy-box-game.googlecode.com/svn
+
+
+
+2012-06-12T22:34:11.435170Z
+3
+anuj.tewari17@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3a8aaf2c-7ac9-8e51-8c7c-911f9b4c9eb8
+
+.actionScriptProperties
+file
+
+
+
+
+2012-05-29T23:52:52.000000Z
+430280b25ade631502544fc9482dcab8
+2012-06-12T22:34:11.435170Z
+3
+anuj.tewari17@gmail.com
+
+.flexProperties
+file
+
+
+
+
+2012-05-29T23:52:52.000000Z
+696420235e870922d81849652edcdcc7
+2012-06-12T22:34:11.435170Z
+3
+anuj.tewari17@gmail.com
+
+.project
+file
+
+
+
+
+2012-05-29T23:52:52.000000Z
+97941baaaaa9c1742f8be2d7009567b4
+2012-06-12T22:34:11.435170Z
+3
+anuj.tewari17@gmail.com
+
+.settings
+dir
+
+bin-debug
+dir
+
+
+
+add
+
+libs
+dir
+
+src
+dir
+
+test
+dir
+
+
+
+delete
+

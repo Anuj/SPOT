@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" initialize="init(event);" currentState="start" viewSourceURL="srcview/index.html">
+	<mx:states>
+		<mx:State name="start">
+			<mx:RemoveChild target="{videoDisplay}"/>
+			<mx:AddChild position="lastChild">
+				<mx:Button x="295.5" y="232" label="Start!" id="start" enabled="true" click="onStartClick(event);" width="207" height="115" fontSize="32"/>
+			</mx:AddChild>
+			<mx:RemoveChild target="{resImage}"/>
+			<mx:RemoveChild target="{callout}"/>
+		</mx:State>
+		<mx:State name="game">
+			<mx:AddChild position="lastChild">
+				<mx:Image x="0" y="0" width="150" height="150" id="obj1" creationComplete="object1Created(event);" horizontalAlign="center" verticalAlign="middle"/>
+			</mx:AddChild>
+			<mx:AddChild position="lastChild">
+				<mx:Image x="647" y="0" width="150" height="150" id="obj2" creationComplete="object2Created(event);" horizontalAlign="center" verticalAlign="middle"/>
+			</mx:AddChild>
+			<mx:SetProperty target="{callout}" name="y" value="156"/>
+			<mx:SetProperty target="{resImage}" name="y" value="156"/>
+			<mx:SetProperty target="{callout}" name="x" value="509"/>
+			<mx:SetProperty target="{resImage}" name="x" value="587"/>
+		</mx:State>
+		<mx:State name="left" basedOn="game">
+			<mx:AddChild position="lastChild">
+				<mx:Image x="46" y="158" source="../bin-debug/assets/arrow.png" width="88" height="175" id="arrowleft"/>
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="right" basedOn="game">
+			<mx:AddChild relativeTo="{obj1}" position="before">
+				<mx:Image x="697" y="153" source="../bin-debug/assets/arrow.png" width="88" height="175" id="arrowright"/>
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="box" basedOn="game">
+			<mx:AddChild position="lastChild">
+				<mx:Image x="130" y="399" width="202" height="189" id="box" creationComplete="boxCreated(event);" scaleContent="true"/>
+			</mx:AddChild>
+			<mx:RemoveChild target="{obj1}"/>
+			<mx:RemoveChild target="{obj2}"/>
+		</mx:State>
+		<mx:State name="win" basedOn="box">
+			<mx:AddChild relativeTo="{callout}" position="before">
+				<mx:Image x="324" y="437" width="150" height="150" id="object"/>
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="intro" basedOn="game">
+			<mx:RemoveChild target="{obj2}"/>
+			<mx:RemoveChild target="{obj1}"/>
+			<mx:RemoveChild target="{resImage}"/>
+		</mx:State>
+	</mx:states>
+	<mx:Fade id="fade" />
+	<mx:Fade id="fadeIn" alphaFrom="0.0" alphaTo="1.0"/>
+	<mx:Move id="obj1Move" target="{obj1}"/>
+	<mx:Move id="obj2Move" target="{obj2}"/>
+	<mx:Move id="objMove" target="{object}"/>
+	<mx:VideoDisplay x="0" y="0" width="798" height="598" id="videoDisplay" autoPlay="false"/>
+	<mx:Image x="531" y="128" width="247" height="193" id="callout"/>
+	<mx:Image x="609" y="128" width="100" height="100" id="resImage"/>
+	
+	<mx:Script>
+		<![CDATA[
+		import mx.events.StateChangeEvent;
+		import mx.events.EffectEvent;
+		import mx.events.VideoEvent;
+		import mx.controls.Alert;
+		import mx.effects.*;
+        public var myZoomShow:Zoom;
+        public var myRotateShow:Rotate;
+        public var ZRShow:Parallel;
+		public var count:int;
+		public var sock:socketConnection = new socketConnection("127.0.0.1",8000); 
+		public var characterMood:String="neutral";
+        public static const START_GAME:String = 'start_game';
+        public var xcenter:Number;
+        public var ycenter:Number;
+        public var snd:Sound;
+        include "interfaceRoutines.as";
+        include "audio.as";
+        public var sReader:syllabusReader;
+        public var sItem:Object;
+        
+        private function init(event:Event):void
+        {       
+        	sReader = new syllabusReader();
+        	sock.addEventListener(socketConnection.DATA_CHANGED, dataHandler);
+        	videoDisplay.addEventListener(VideoEvent.COMPLETE,videoComplete);
+        	determineCharacterMood(characterMood);
+        	playVideo();
+        	//this.addEventListener(StateChangeEvent.CURRENT_STATE_CHANGING, stateChangeHandler);
+        }
+                
+        // Event handlers
+        
+        //Setting the hide effect for image 1
+        private function object1Created(event:Event):void
+        {
+        	obj1.setStyle("hideEffect", fade);
+        }
+        
+        
+        //Setting the hide effect for image 2
+        private function object2Created(event:Event):void
+        {
+        	obj2.setStyle("hideEffect", fade);
+        }
+        
+        //Setting the hide effect for box object
+        private function boxCreated(event:Event):void
+        {
+        	box.setStyle("hideEffect", fadeIn);
+        }
+        
+        //If the move event on image 2 has ended, show the box
+        private function obj2EventEnded(event:Event):void
+        {
+        	this.currentState = "box";
+        	box.source = "./assets/box.png";
+        	box.scaleContent = true;
+        	showImage(box);
+        }
+        
+        //If the user clicks on start go to intro
+        private function onStartClick(event:Event):void
+        {        	
+        	intro();
+        	this.stage.displayState = StageDisplayState.FULL_SCREEN;
+        }
+      
+      
+      //Timer event handler
+      private function timerHandler(event:Event):void
+	   {
+	   			obj1Move.xTo = 100;
+        		obj1Move.yTo = 300;
+        		obj2Move.xTo = 100;
+        		obj2Move.yTo = 300;
+        		obj1Move.play();
+        		obj2Move.play();        		
+        		obj1Move.addEventListener(EffectEvent.EFFECT_END, obj1AnimComplete);        	    
+        		obj2Move.addEventListener(EffectEvent.EFFECT_END, obj2AnimComplete);        		
+	   }
+       
+       private function obj1AnimComplete(event:Event):void
+       {
+       			if(obj1.x != -300)
+       			{
+       				obj1Move.xTo = -300;
+        	    	obj1Move.yTo = 300;
+        	    	obj1Move.duration = 2000;
+        	    	obj1Move.play();
+        	 	}
+        	 	else
+        	 	{
+        	 		obj1.visible = false;
+        		    obj2.visible = false;
+        		    if(audioQueue.length>0)
+			       	{
+			       		audioQueue.removeAll();
+			       	}
+        		    addAudio("./assets/trial loops/ive hidden one of the things.mp3");
+        		    addAudio("./assets/trial loops/its your turn to figure out.mp3");
+        		    playIntroAudio();
+        	 		this.currentState = "box";
+	        		box.source = "./assets/box.png";
+	        		box.scaleContent = true;
+	        		showImage(box);
+        	 	}
+       } 
+        
+       private function obj2AnimComplete(event:Event):void
+       {
+       	       if(obj2.x != 151)
+       	       {
+	       			obj2Move.xTo = 151;
+	        	    obj2Move.yTo = 437;
+	        	    obj2Move.play();	  
+	        	    obj2Move.duration = 2000;  
+       	       }
+       }  
+        
+        private function dataHandler(e:Event):void
+        {
+            determineCharacterMood(sock.getData());
+            playVideo();
+        }
+        
+        
+        private function determineCharacterMood(cm:String):void
+        {
+        	if(cm == "yes\n" || cm == "happy\n")
+        	{
+        		characterMood = "happy";
+        	}
+        	else if(cm == "no\n" || cm == "sad\n")
+        	{
+        		characterMood = "sad";
+        	}
+        	else if(cm == "right\n")
+        	{
+        	    rightPrompts();	
+        	    characterMood = "right";
+        	}
+        	else if(cm == "left\n")
+        	{
+        	    leftPrompts();	
+        	    characterMood = "left";
+        	}
+        	else if(cm == "game\n")
+        	{
+        		game();
+        	}
+        	else if(cm.indexOf("talk") != -1)
+        	{
+        		characterMood = "talk";
+        	}
+        	else if(cm.indexOf("reveal") != -1)
+        	{
+        	    characterMood = "reveal";
+        	    reveal(cm.substring(cm.indexOf(" ")+1,cm.length-1));
+        	}
+        	else if(cm == "start\n")
+        	{
+        		startGame();
+        	}         
+        	else if(cm.indexOf("edge") != -1)
+        	{
+        		edge();        		
+        	}      	
+        	else
+        	{
+        		characterMood = "neutral";
+        	}
+        }
+        
+
+        private function playVideo():void
+        {
+        	//Alert.show(characterMood);
+        	if(videoDisplay.playing == true)
+        	{
+        		videoDisplay.stop();
+        	}
+        	switch(characterMood)
+			{
+			 case "happy":
+			 	characterHappy();
+				break;
+			 case "sad":
+			 	characterSad();
+				break;
+			 case "left":
+			 	videoDisplay.source = "./assets/left.mp4";
+				break;
+			 case "right":
+			 	videoDisplay.source = "./assets/right.mp4";
+				break;
+			  case "talk":
+			 	videoDisplay.source = "./assets/talk.mp4";
+				break;			
+			 case "reveal":
+			 	videoDisplay.source = "./assets/hyper.mp4";
+				break;	
+			 case "intro":
+			 	videoDisplay.source = "./assets/still.mp4";	
+       			break;
+			 default:
+			    var r:int = rand(1,7);
+			 	if(r>=1 && r<=5)
+				{
+					videoDisplay.source = "./assets/still.mp4";
+				}
+				if(r == 6)
+				{
+					videoDisplay.source = "./assets/loyal.mp4";
+				}
+				if(r == 7)
+				{
+					videoDisplay.source = "./assets/neat.mp4";
+				}
+				//hideImage(resImage);
+				//hideImage(callout);
+			}
+			videoDisplay.play();
+        }
+        
+        private function rand(min:int, max:int):int
+		{
+			return Math.random() * (max - min + 1) + min;
+		}
+        
+        private function showImage(img:mx.controls.Image):void
+        {
+        	if(img !=null)
+        	{
+        		img.visible = true;
+        		img.enabled = true;
+        	}
+        }
+        
+        private function hideImage(img:mx.controls.Image):void
+        {
+        	if(img !=null)
+        	{
+        		img.visible = false;
+        		img.enabled = false;
+        	}
+        }        
+        
+       private function videoComplete(event:Event):void{  
+        	if(characterMood=="happy" || characterMood=="sad" || characterMood=="left" || characterMood=="right" || characterMood == "talk")
+        	{        		
+        		determineCharacterMood("neutral");
+        	}
+        	playVideo();
+       }
+       
+    ]]>
+	</mx:Script>
+	
+	
+	
+</mx:WindowedApplication>
