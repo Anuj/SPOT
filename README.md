@@ -4,6 +4,8 @@ SPOT
 SPOT is an interactive QA agent for preschoolers. 
 
 Here is how the project is organized:
+
+
 Puppybox - Contains a flash builder 4.6 project that contains most of the animated content for the interactive agent. The PuppyBox/test folder contains all the assets that SPOT uses. Most of this content should be reusable. This piece of code runs an AIR websocket server on port 5000, and waits for hypothesis from the speech rec code explained below.
 
 SpeechRecCode - Contains a basic javascript code that talks to Google's speech services, listens to client audio and retrives a speech rec hypothesis. This hypothesis is then sent over a websocket port 5000 to the flash builder code.
